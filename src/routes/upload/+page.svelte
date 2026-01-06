@@ -70,8 +70,9 @@
   // --- 2. 폼 제출 로직 ---
   async function handleSubmit() {
     const password = prompt("동아리 관리자 비밀번호를 입력하세요.");
-  
-    if (password !== "imdevon") { // 여기에 실제 사용할 비번 입력
+    
+    const PW = "imdevon"
+    if (password !== PW) {
       alert("비밀번호가 틀렸습니다.");
       return;
     }
@@ -156,7 +157,7 @@
   
       <div class="input-group">
         <div class="label-row">
-          <label for="summary" placeholder="프로젝트에 대한 간략한 소개">SHORT_SUMMARY</label>
+          <label for="summary" placeholder="프로젝트에 대한 간략한 소개">SUMMARY</label>
           <span class="char-count {summaryCount > MAX_SUMMARY ? 'limit' : ''}">
             {summaryCount}/{MAX_SUMMARY}
           </span>
