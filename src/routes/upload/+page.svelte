@@ -141,22 +141,22 @@
   
       <div class="input-group">
         <label for="title">TITLE</label>
-        <input type="text" id="title" bind:value={formData.title} required />
+        <input type="text" id="title" bind:value={formData.title} required placeholder="프로젝트 제목" />
       </div>
 
       <div class="input-group">
         <label for="github">SOURCE_URL</label>
-        <input type="text" id="github" bind:value={formData.github_url} required />
+        <input type="text" id="github" bind:value={formData.github_url} required placeholder="프로젝트를 저장하는 Github, Google Drive 등의 주소 (ex: https://github.com/sdbgdevon/devon-archive)"/>
       </div>
 
       <div class="input-group">
         <label for="demo">DEMO_URL</label>
-        <input type="text" id="demo" bind:value={formData.demo_url} required />
+        <input type="text" id="demo" bind:value={formData.demo_url} placeholder="웹에서 작동한다면 프로젝트 시연 링크" />
       </div>
   
       <div class="input-group">
         <div class="label-row">
-          <label for="summary">SHORT_SUMMARY</label>
+          <label for="summary" placeholder="프로젝트에 대한 간략한 소개">SHORT_SUMMARY</label>
           <span class="char-count {summaryCount > MAX_SUMMARY ? 'limit' : ''}">
             {summaryCount}/{MAX_SUMMARY}
           </span>
@@ -179,7 +179,7 @@
           id="description" 
           bind:value={formData.description}
           rows="5"
-          placeholder="상세 페이지에 노출될 긴 글"
+          placeholder="상세 페이지에 노출될 설명명"
         ></textarea>
       </div>
   
