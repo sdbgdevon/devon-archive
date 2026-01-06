@@ -69,6 +69,13 @@
 
   // --- 2. 폼 제출 로직 ---
   async function handleSubmit() {
+    const password = prompt("동아리 관리자 비밀번호를 입력하세요.");
+  
+    if (password !== "imdevon") { // 여기에 실제 사용할 비번 입력
+      alert("비밀번호가 틀렸습니다.");
+      return;
+    }
+
     if (isSubmitting || isImageProcessing) return;
     
     if (!base64File) {
