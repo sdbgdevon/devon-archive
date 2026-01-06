@@ -18,7 +18,7 @@
     demo_url: '',
     summary: '',
     description: '',
-    members: 'Dev-on' // 기본값 설정
+    members: ''
   };
 
   $: summaryCount = formData.summary.length;
