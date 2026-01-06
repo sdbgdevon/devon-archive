@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Wanted';
+  src: url('$static/fonts/WANTEDSANS-MEDIUM.TTF') format('ttf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; /* 폰트 로딩 중에도 텍스트가 보이도록 설정 */
+}
+
+@font-face {
+  font-family: 'Wanted';
+  src: url('/fonts/WANTEDSANS-REGULAR.TTF') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; /* 폰트 로딩 중에도 텍스트가 보이도록 설정 */
+}
+
+:root {
+  --line-color: #000000;
+  --bg-main: #fff;
+  --point-orange: #ff5500;
+  --font-main: 'Wanted', sans-serif;
+}
+
+*{
+  font-family: var(--font-main);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  font-family: var(--font-main);
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 텍스트 드래그 시 오렌지 배경 */
+::selection {
+  background: var(--point-orange);
+  color: #fff;
+}
+
+/* 스크롤바 커스텀 (오렌지 포인트) */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--point-orange);
+}
+
+/* 텍스트가 넘칠 때를 대비한 공통 클래스 */
+.text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
